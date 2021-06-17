@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Hello from './Hello';
+import Post from './Post';
 import reportWebVitals from './reportWebVitals';
+
+let post1 = {
+  postTitle: "Learn More About Dinos",
+  author: "Nick Schmitt",
+  content: "This is my amazing article about dinosaurs and their many amazing properties.",
+  comments: [
+    'This article is awesome!',
+    'Wow - what an incredible article.'
+  ]
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <Hello />
+    <Post postTitle={post1.postTitle} author={post1.author} content={post1.content} comments={post1.comments} />
   </React.StrictMode>,
   document.getElementById('root')
 );
